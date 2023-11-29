@@ -1,9 +1,11 @@
 import React from "react";
 
 const Settings = (props) => {
-    return <div>
+    return (
+    <div>
         Settings
     </div>
+    )
 }
 
 export default Settings
