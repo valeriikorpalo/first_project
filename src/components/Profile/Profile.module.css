@@ -1,5 +1,6 @@
 .img {
-  width: 900px;
+  width: auto;
+  padding: auto 30px;
 }
 
 .item {
