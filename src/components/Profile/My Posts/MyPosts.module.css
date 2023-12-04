@@ -1,3 +1,16 @@
-  .posts {
-    color: aliceblue;
-  }
+ .postsBlock {
+   padding: 10px;
+ }
+
+ .posts {
+   color: aliceblue;
+ }
+
+ .postsMain {
+   color: white;
+   padding: 10px;
+ }
+
+ .buttonItem {
+   padding-right: 30px;
+ }
