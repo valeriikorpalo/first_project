@@ -10,23 +10,30 @@ const Song = (props) => {
 }
 
 const Music = (props) => {
+    
+    let MusicButton = () => { alert('Download Music') }
+    let MusicUpload = () => { alert('Upload Music') }
 
+    
     return (
         <div className={s.musicBox}>
-            <div className={s.musics}>My Music</div>
+            <div className={s.musics}><h3>My Music</h3></div>
             <div>PlayList</div>
             <div className="songs">
                 <div className="songItem">
                     <Song />
                 </div>
             </div>
-            <ReactAudioPlayer
+           
+           <div className={s.audioPlayer} ><ReactAudioPlayer
                 src="my_audio_file.ogg"
                 autoPlay
                 controls
             />
-            <div><button className="musicDownload">Download</button>
-                <button className="musicUpload">Upload</button></div>
+            </div>
+            
+            <div><button onClick={MusicButton} className="musicDownload">Download</button>
+                <button onClick={MusicUpload} className="musicUpload">Upload</button></div>
         </div>
     )
 }

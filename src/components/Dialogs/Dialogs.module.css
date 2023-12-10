@@ -33,3 +33,10 @@
     transition-duration: 1200ms;
 }
 
+.sendButton {
+    padding-left: 125px;
+}
+
+.textArea {
+    padding-top: 50px ;
+}

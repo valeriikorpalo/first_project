@@ -6,9 +6,29 @@ import Post from './Post/Post'
 
 const MyPosts = (props) => {
 
+  const TextArea = () => {
 
-  
-  let postsElements = props.posts.map(p => <Post id={p.id} message={p.message} likeCount={p.likesCount} />)
+    return (
+
+      <textarea
+        ref={newPostElement}
+        className={s.textArea}>
+      </textarea>
+    )
+  }
+
+  let newPostElement = React.createRef();
+
+  let addPost = () => {
+
+    let text = newPostElement.current.value;
+    alert(text);
+    newPostElement.current.value = '';
+
+  }
+
+
+  let postsElements = props.state.map(p => <Post id={p.id} message={p.message} likeCount={p.likesCount} />)
 
   return (
     <div className={s.postsBlock}>
@@ -17,11 +37,10 @@ const MyPosts = (props) => {
       </div>
       <div>
         <div>
-          <textarea></textarea>
+          <TextArea />
         </div>
         <div className={s.button}>
-          <span className={s.buttonItem}><button>Add Post</button></span>
-          <span className={s.buttonItem}><button>Remove Text</button></span>
+          <span className={s.buttonItem}><button onClick={addPost}>Add Post</button></span>
         </div>
       </div>
       <div className={s.posts}>

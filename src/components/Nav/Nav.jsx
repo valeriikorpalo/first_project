@@ -9,7 +9,7 @@ const Nav = (props) => {
     <nav className={s.nav}>
       <div className={s.item}>
         <div className={s.link}>
-          <NavLink to='/profile'>Profile</NavLink>
+          <NavLink  to='/profile'>Profile</NavLink>
         </div>
         <div className={s.link}>
           <NavLink to='/dialogs'>Dialogs</NavLink>

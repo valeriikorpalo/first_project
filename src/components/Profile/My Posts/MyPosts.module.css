@@ -14,3 +14,12 @@
  .buttonItem {
    padding-right: 30px;
  }
+
+ .textArea {
+  width: 400px;
+  height: 100px;
+  resize: none;
+  background-color: grey;
+  opacity: 40%;
+  color:aliceblue;
+ }
