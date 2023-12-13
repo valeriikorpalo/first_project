@@ -24,7 +24,7 @@ const MyPosts = (props) => {
     let text = newPostElement.current.value;
     alert(text);
     newPostElement.current.value = '';
-
+    
   }
 
 
