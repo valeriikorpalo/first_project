@@ -36,7 +36,7 @@
 }
 
 .friends {
-  padding: 150px 10px 0;
+  padding: 100px 10px 0;
 }
 
 .friendsItem {
@@ -44,9 +44,9 @@
 }
 
 
-.photoItem {
-  width: 60px;
-  height: 60px;
+.userPhotosItem {
+  width: 55px;
+  height: 55px;
   border: 1px solid black;
   border-radius: 100px;
   object-fit: cover;
@@ -56,12 +56,25 @@
 .userItems {
   display: flex;
   justify-content: space-between;
-  padding: 0 0 0 10px;
+  margin: 0 10px;
 }
 
 .userNames {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   margin: 0 10px;
   margin-top: 0;
+}
+
+.userNameItem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.userItems {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 5px;
 }

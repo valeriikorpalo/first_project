@@ -1,31 +1,15 @@
-.descriptionBlock {
-  display: grid;
-  grid-template-columns: 5fr 10fr;
-  color: white;
-  padding: 10px;
+.container {
+  border-bottom: 2px solid white;
 }
-
-
-.status {
-  display: inline-block;
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background-color: green;
-}
-
 
 .profileImg {
-  width: 1000px;
-  height: 200px;
+  width: auto;
+  height: 180px;
   border: 1px solid rgba(33, 5, 191, 0.295);
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .profileImg .img {
-  max-width: 1200px;
+  max-width: auto;
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -33,19 +17,4 @@
 
 .img {
   max-width: 100%;
-}
-
-.avatarImg {
-  width: 200px;
-  height: 200px;
-  border: 2px solid rgb(255, 255, 255);
-  border-radius: 600px;
-}
-
-.descriptionAvatar {
-  padding: 20px;
-}
-
-.bioItem {
-  padding-bottom: 20px;
 }

@@ -7,30 +7,25 @@ const FriendsList = (props) => {
 
   return (
     <div className={s.friends}>
-      <h3 className={s.friendsItem}>Friends List</h3>
+      <h4 className={s.friendsItem}>Friends List</h4>
     </div>
   )
 }
 
-const UserPhoto = (props) => {
-  return (
-    <img className={s.photoItem}
-      src={props.img} alt="img" />
-  )
-}
 
-const UserName = (props) => {
+const UsersSlidBar = (props) => {
   return (
-    <div>
-    <div className={s.nameItem}>{props.name}</div>
+    <div className={s.userItem}>
+      <img className={s.userPhotosItem}
+        src={props.img} alt="img" />
+      <div className={s.userNameItem}>{props.name}</div>
     </div>
   )
 }
 
 const Nav = (props) => {
 
-  let userPhotoElement = props.state.sidebar.map(photo => <UserPhoto img={photo.img} />)
-  let userNameElement = props.state.sidebar.map(name => <UserName id={name.id} name={name.name} />)
+  let usersElement = props.state.sidebar.map(user => <UsersSlidBar id={user.id} name={user.name} img={user.img} />)
 
   return (
     <div className={s.navContainer}>
@@ -54,15 +49,11 @@ const Nav = (props) => {
         </div>
       </nav>
       <FriendsList />
-      <div className={s.userContainer}>
+      <div className={s.usersContainer}>
         <div className={s.userItems}>
-          {userPhotoElement}
-        </div>
-        <div className={s.userNames}>
-          {userNameElement}
+          {usersElement}
         </div>
       </div>
-
     </div>
   )
 }

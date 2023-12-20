@@ -7,7 +7,16 @@ import { NavLink } from "react-router-dom";
 const MessagesItem = (props) => {
 
     return (
-        <div className={s.message}>{props.message}</div>
+        <div className={s.messageContainer}>
+            <div className={s.dialogItems}>
+                <div className={s.dialogItem}>
+                    <img className={s.dialogAvatarItem}
+                        src={props.img} />
+                    <div className={s.dialogNameItem}>{props.userName}</div>
+                </div>
+            </div>
+            <div className={s.message}><a>{props.message}</a></div>
+        </div>
     )
 }
 
@@ -25,15 +34,15 @@ const Dialogs = (props) => {
 
     let sendDialogElement = React.createRef();
 
-    let sendMessage = () => { 
+    let sendMessage = () => {
         let text = sendDialogElement.current.value;
-        alert(text)
+        props.addMessage(text)
         sendDialogElement.current.value = '';
     }
 
 
     let dialogsElements = props.state.dialogs.map(d => <DialogsItem id={d.id} name={d.name} />)
-    let messagesElements = props.state.messages.map(m => <MessagesItem id={m.id} message={m.message} />)
+    let messagesElements = props.state.messages.map(m => <MessagesItem id={m.id} message={m.message} userName={m.username} img={m.img} />)
 
 
     return (
@@ -45,12 +54,14 @@ const Dialogs = (props) => {
             </div>
             <div className={s.messages}>
                 <div className={s.messagesItem}>
-                    {messagesElements}
+                    <div className={s.messageItem}>
+                        {messagesElements}
+                    </div>
                     <div className={s.textArea}>
-                        <textarea ref={sendDialogElement}></textarea>
+                        <textarea className={s.textAreaItem} ref={sendDialogElement}></textarea>
                     </div>
                     <div className={s.sendButton}>
-                        <button onClick={sendMessage}>Send</button>
+                        <button className={s.sendButtonItem} onClick={sendMessage}>Send</button>
                     </div>
                 </div>
             </div>

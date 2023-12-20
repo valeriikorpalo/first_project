@@ -15,7 +15,7 @@
 
 .app-wrapper-content {
   grid-area: c;
-  background-color: rgb(139, 8, 8);
+  background-color: rgb(86, 86, 86);
 }
 
 @media screen {
